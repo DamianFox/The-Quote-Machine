@@ -1,14 +1,11 @@
-// https://angular.io/docs/ts/latest/guide/router.html
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-    {
-        path:"",
-        component: HomeComponent,
-    }
+    { path:"", component: HomeComponent },
+    { path: "**", component: HomeComponent }
 ]
 
 @NgModule({

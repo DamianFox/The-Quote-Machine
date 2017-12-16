@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+// import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,22 +10,22 @@ import { ActivatedRoute } from '@angular/router';
 export class AppComponent implements OnInit{
   title = 'The Quote Machine!';
   description = 'A new app';
-  query: string;
-  private routeSub:any;
+  // query: string;
+  // private routeSub:any;
 
 
-  constructor(private route:ActivatedRoute){
-      this.routeSub = route.params.subscribe(params=>{
-          console.log(params)
-          this.query = params['q']
-      })
+  constructor(/*private route:ActivatedRoute*/){
+      // this.routeSub = route.params.subscribe(params=>{
+      //     console.log(params)
+      //     this.query = params['q']
+      // })
   }
 
   ngOnInit() {
       
   }
-  ngOnDestroy(){
-      this.routeSub.unsubscribe()
-  }
+  // ngOnDestroy(){
+  //     this.routeSub.unsubscribe()
+  // }
 }
 
