@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuoteService } from '../quote.service';
 
 @Component({
   selector: 'home',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+	public quote:object;
+	public author:object;
 
-  ngOnInit() {
-  }
+
+  	constructor(private _quoteService:QuoteService) { }
+
+	ngOnInit() {
+		this.getQuote();
+ 	}
+ 
+	getQuote() {
+		this._quoteService.getQuote().subscribe(
+			data => { 
+				this.quote = data.quote;
+				this.author = data.author;
+			},
+			err => console.error(err),
+			() => console.log('done loading quote'));
+	}
 
 }
