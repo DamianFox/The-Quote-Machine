@@ -11,18 +11,16 @@
       </header>
 
       <main role="main" class="inner cover">
-        <h2 class="cover-heading">{{quote}}</h2>
+      	<div class="quote-group" [@fadeAnimation]="fade" >
+      		<blockquote>
+	        	<h2 class="cover-heading" >{{quote}}</h2>
+	        </blockquote>
+        </div>
         <h3 class="lead">{{author}}</h3>
         <p class="lead">
           <button (click)="getQuote()" class="btn btn-lg btn-secondary">Show quote</button>
         </p>
       </main>
-
-      <footer class="mastfoot">
-        <div class="inner">
-          <p><a href="https://damianofossa.com/">Damiano Fossa</a></p>
-        </div>
-      </footer>
 
     </div>
 

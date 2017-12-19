@@ -35,6 +35,50 @@ body {
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
+h2 {
+  font-family: 'Cardo', serif;
+  font-size: 1.6rem;
+  /*margin: 0 0 1em;*/
+}
+
+h3.lead {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 0 0 3em;
+}
+
+blockquote {
+  display:block;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+  
+  /*Font*/
+  font-family: 'Cardo', serif;
+  font-size: 16px;
+  line-height: 1.2;
+} 
+
+blockquote:before, blockquote:after {
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+}
+
+blockquote:before {
+  content: "\201C";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+blockquote:after {
+  content: "\201D";
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+}
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
@@ -91,6 +135,16 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+
+.quote-group:before, .quote-group:after {
+  content: '';
+  width: 285px;
+  height: 1px;
+  background: rgba(255, 255, 255, .3);
+  margin: 21px auto;
+  display: block;
+}
+
 
 @media (min-width: 48em) {
   .masthead-brand {
